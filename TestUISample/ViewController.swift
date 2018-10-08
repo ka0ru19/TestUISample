@@ -24,6 +24,10 @@ class ViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
 }
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
