@@ -15,7 +15,7 @@ class DemoBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("DemoBaseViewController読み込み")
+        debugLog("DemoBaseViewController読み込み")
         
         self.view.backgroundColor = .white
 

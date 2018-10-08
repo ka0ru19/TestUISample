@@ -16,7 +16,7 @@ class UILabelViewController: DemoBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("UILabelViewController読み込み")
+        debugLog("UILabelViewController読み込み")
 
         // Do any additional setup after loading the view.
         
