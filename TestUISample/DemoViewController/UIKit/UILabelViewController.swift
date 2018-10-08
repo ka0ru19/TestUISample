@@ -18,8 +18,6 @@ class UILabelViewController: DemoBaseViewController {
 
         // Do any additional setup after loading the view.
         
-        debugLog("UILabelViewController読み込み")
-        
         // サイズを指定
         label.frame.size = CGSize(width: self.view.frame.width * 2/3, height: 50)
         
@@ -29,7 +27,7 @@ class UILabelViewController: DemoBaseViewController {
         // レイヤーの境界で切り抜きされるか指定（角を丸くするため）
         label.layer.masksToBounds = true
             
-        // 角を丸くする
+        // 角の丸み半径を指定
         label.layer.cornerRadius = 15.0
         
         // 背景色を指定

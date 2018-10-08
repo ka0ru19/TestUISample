@@ -9,17 +9,16 @@
 import UIKit
 
 class DemoBaseViewController: UIViewController {
-
-    var runViewController: UILabelViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        debugLog("DemoBaseViewController読み込み")
+        // Do any additional setup after loading the view.
+        
+        debugLog("読み込み開始 : " + String(describing: type(of: self)))
         
         self.view.backgroundColor = .white
-
-        // Do any additional setup after loading the view.
+        
     }
     
     class func newInstance()->DemoBaseViewController {
