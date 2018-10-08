@@ -38,6 +38,6 @@ func debugLog(_ obj: Any?,
         objLog = ":" + "\(obj)"
     }
     
-    print("[\(fileLog)\(function):L\(line)] \(objLog)")
+    print("[\(fileLog)\(function):L\(line)]\(objLog)")
     #endif
 }

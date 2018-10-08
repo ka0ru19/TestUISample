@@ -64,9 +64,7 @@
 			children = (
 				63F97011216A8F5E00BBEE93 /* AppDelegate.swift */,
 				63F97013216A8F5E00BBEE93 /* ViewController.swift */,
-				63F97027216A9EDF00BBEE93 /* UIButtonViewController.swift */,
-				63F97025216A9C0E00BBEE93 /* UILabelViewController.swift */,
-				63F97023216A914D00BBEE93 /* DemoBaseViewController.swift */,
+				63F9702B216B5CBF00BBEE93 /* DemoViewController */,
 				63F97029216B4CBB00BBEE93 /* log.swift */,
 				63F97015216A8F5E00BBEE93 /* Main.storyboard */,
 				63F97018216A8F5F00BBEE93 /* Assets.xcassets */,
@@ -74,6 +72,24 @@
 				63F9701D216A8F5F00BBEE93 /* Info.plist */,
 			);
 			path = TestUISample;
+			sourceTree = "<group>";
+		};
+		63F9702B216B5CBF00BBEE93 /* DemoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				63F97023216A914D00BBEE93 /* DemoBaseViewController.swift */,
+				63F9702C216B5CED00BBEE93 /* UIKit */,
+			);
+			path = DemoViewController;
+			sourceTree = "<group>";
+		};
+		63F9702C216B5CED00BBEE93 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				63F97027216A9EDF00BBEE93 /* UIButtonViewController.swift */,
+				63F97025216A9C0E00BBEE93 /* UILabelViewController.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
