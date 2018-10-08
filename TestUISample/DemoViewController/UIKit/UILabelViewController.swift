@@ -11,29 +11,38 @@ import UIKit
 class UILabelViewController: DemoBaseViewController {
     
     // ラベルを宣言
-    let label = UILabel.init()
+    private let label = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        debugLog("UILabelViewController読み込み")
 
         // Do any additional setup after loading the view.
         
-        // サイズを指定
-        label.frame.size = CGSize(width: self.view.frame.width * 2/3, height: 30)
+        debugLog("UILabelViewController読み込み")
         
-        // 位置を画面中央の上部に指定
+        // サイズを指定
+        label.frame.size = CGSize(width: self.view.frame.width * 2/3, height: 50)
+        
+        // 位置を指定
         label.center = CGPoint(x: self.view.center.x, y: self.view.frame.height * 1/3)
         
-        // 背景色を黄色に指定
-        label.backgroundColor = UIColor.yellow
+        // レイヤーの境界で切り抜きされるか指定（角を丸くするため）
+        label.layer.masksToBounds = true
+            
+        // 角を丸くする
+        label.layer.cornerRadius = 15.0
         
-        // ラベルいに表示する文字を指定
+        // 背景色を指定
+        label.backgroundColor = UIColor.blue
+        
+        // ラベルに表示する文字を指定
         label.text = "UILabelてすと"
         
+        // ラベルの文字色を指定
+        label.textColor = UIColor.orange
+        
         // 文字の表示位置を中央に指定
-        label.contentMode = .center
+        label.textAlignment = NSTextAlignment.center
         
         // このViewConrollerのサブビューにラベルを追加
         self.view.addSubview(label)
