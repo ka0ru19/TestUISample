@@ -43,8 +43,8 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let nextViewController = cellInfoArray[indexPath.row].vc.newInstance()
-        self.present(nextViewController, animated: true, completion: nil)
+        let demoViewController = cellInfoArray[indexPath.row].vc.newInstance()
+        self.present(demoViewController, animated: true, completion: nil)
     }
     
     

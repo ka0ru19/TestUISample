@@ -11,6 +11,7 @@ import UIKit
 class DemoBaseViewController: UIViewController {
     
     let backToMenuButton = UIButton()
+    let toolBar = UIToolbar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +21,15 @@ class DemoBaseViewController: UIViewController {
         debugLog("読み込み開始 : " + String(describing: type(of: self)))
         
         self.view.backgroundColor = .white
-        
-        backToMenuButton.frame.size = CGSize(width: 36, height: 36)
-        backToMenuButton.frame.origin = CGPoint(x: 8, y: 8)
-        backToMenuButton.backgroundColor = .lightGray
-        backToMenuButton.setTitle("戻る", for: .normal)
-        backToMenuButton.addTarget(self, action: #selector(self.onTappedBackToMenuButton(sender:)), for: .touchUpInside)
-        self.view.addSubview(backToMenuButton)
+        let toolBarHeight = UINavigationController().toolbar.frame.size.height
+        toolBar.frame.size = CGSize(width: self.view.frame.width, height: toolBarHeight)
+        toolBar.frame.origin = CGPoint(x: 0, y: self.view.frame.height - toolBarHeight)
+        toolBar.barStyle = .default
+        let backToMenuButtonItem = UIBarButtonItem(title: "back", style: .plain, target: self, action: #selector(self.onTappedBackToMenuButton(sender:)))
+        let flexibleSpaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let goToCodeBarButtonItem = UIBarButtonItem(title: "code", style: .plain, target: self, action: #selector(self.onTappedToCodeBarButtonItem(sender:)))
+        toolBar.items = [backToMenuButtonItem, flexibleSpaceItem, goToCodeBarButtonItem]
+        self.view.addSubview(toolBar)
     }
     
     class func newInstance()->DemoBaseViewController {
@@ -35,6 +38,12 @@ class DemoBaseViewController: UIViewController {
     
     @objc func onTappedBackToMenuButton(sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func onTappedToCodeBarButtonItem(sender: UIBarButtonItem) {
+        debugLog("onTappedToCodeBarButtonItem")
+        let nextViewController = CodeViewController()
+        self.present(nextViewController, animated: true, completion: nil)
     }
     
     /*

@@ -16,6 +16,7 @@
 		63F97026216A9C0E00BBEE93 /* UILabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F97025216A9C0E00BBEE93 /* UILabelViewController.swift */; };
 		63F97028216A9EDF00BBEE93 /* UIButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F97027216A9EDF00BBEE93 /* UIButtonViewController.swift */; };
 		63F9702A216B4CBB00BBEE93 /* log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F97029216B4CBB00BBEE93 /* log.swift */; };
+		63F9702E2172655500BBEE93 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F9702D2172655500BBEE93 /* CodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		63F97025216A9C0E00BBEE93 /* UILabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelViewController.swift; sourceTree = "<group>"; };
 		63F97027216A9EDF00BBEE93 /* UIButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonViewController.swift; sourceTree = "<group>"; };
 		63F97029216B4CBB00BBEE93 /* log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = log.swift; sourceTree = "<group>"; };
+		63F9702D2172655500BBEE93 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				63F97023216A914D00BBEE93 /* DemoBaseViewController.swift */,
+				63F9702D2172655500BBEE93 /* CodeViewController.swift */,
 				63F9702C216B5CED00BBEE93 /* UIKit */,
 			);
 			path = DemoViewController;
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63F97028216A9EDF00BBEE93 /* UIButtonViewController.swift in Sources */,
+				63F9702E2172655500BBEE93 /* CodeViewController.swift in Sources */,
 				63F97024216A914D00BBEE93 /* DemoBaseViewController.swift in Sources */,
 				63F97014216A8F5E00BBEE93 /* ViewController.swift in Sources */,
 				63F97012216A8F5E00BBEE93 /* AppDelegate.swift in Sources */,
