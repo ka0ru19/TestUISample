@@ -33,6 +33,7 @@ class CodeViewController: UIViewController {
                                          height: toolBar.frame.origin.y - statusBarHeight - margin * 2)
         codeTextView.backgroundColor = .cyan
         codeTextView.isEditable = false
+        codeTextView.text = GenerateCode().readText()
         self.view.addSubview(codeTextView)
         
     }

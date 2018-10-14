@@ -8,14 +8,15 @@
 
 import UIKit
 
-class DemoBaseViewController: UIViewController {
+class DemoBaseViewController: UIViewController, PropertyNames {
     
     let backToMenuButton = UIButton()
     let toolBar = UIToolbar()
+    private var instancesArray: [(instanceName: String, instanceClass: AnyClass.Type)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         debugLog("読み込み開始 : " + String(describing: type(of: self)))
@@ -36,6 +37,15 @@ class DemoBaseViewController: UIViewController {
         return self.init()
     }
     
+    func getPropertyNames() -> [String] {
+        debugLog(self.propertyNames())
+        return self.propertyNames()
+    }
+    
+    public func setInstance(instanceName: String, instanceClass: AnyClass.Type) {
+        instancesArray.append((instanceName: instanceName, instanceClass: instanceClass))
+    }
+    
     @objc func onTappedBackToMenuButton(sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -47,13 +57,13 @@ class DemoBaseViewController: UIViewController {
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

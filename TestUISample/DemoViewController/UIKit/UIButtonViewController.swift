@@ -43,8 +43,28 @@ class UIButtonViewController: DemoBaseViewController {
         // イベントを追加する
         button.addTarget(self, action: #selector(self.onClickButton(sender:)), for: .touchUpInside)
         
-        // ボタンをViewに追加.
+        // ボタンをViewに追加
         self.view.addSubview(button)
+        
+        let propertyNameArray: [String] = self.getPropertyNames()
+        debugLog(String(describing: type(of: propertyNameArray.first)))
+        
+        let generateCode = GenerateCode()
+        generateCode.addInstance("private let button = UIButton()")
+        generateCode.addInstanceDetermine("サイズを指定", "button.frame.size = CGSize(width: self.view.frame.width * 2/3, height: 50)")
+        generateCode.addInstanceDetermine("位置を指定", "button.center = CGPoint(x: self.view.center.x, y: self.view.frame.height * 2/3)")
+        generateCode.addInstanceDetermine("背景色を指定", "button.backgroundColor = UIColor.red")
+        generateCode.addInstanceDetermine("レイヤーの境界で切り抜きされるか指定（角を丸くするため）", "button.layer.masksToBounds = true")
+        generateCode.addInstanceDetermine("角の丸み半径を指定", "button.layer.cornerRadius = button.frame.height / 2")
+        generateCode.addInstanceDetermine("タイトルを設定する(通常時)", "button.setTitle(\"ボタン(通常)\", for: .normal)")
+        generateCode.addInstanceDetermine(nil, "button.setTitleColor(UIColor.white, for: .normal)")
+        generateCode.addInstanceDetermine("タイトルを設定する(ボタンが押されている時)", "button.setTitle(\"ボタン(押されている時)\", for: .highlighted)")
+        generateCode.addInstanceDetermine(nil, "button.setTitleColor(UIColor.black, for: .highlighted)")
+        generateCode.addInstanceDetermine("イベントを追加する", "button.addTarget(self, action: #selector(self.onClickButton(sender:)), for: .touchUpInside)")
+        generateCode.addInstanceDetermine("ボタンをViewに追加", "self.view.addSubview(button)")
+        generateCode.writeCode()
+        
+        debugLog(GenerateCode().readText())
     }
     
     @objc func onClickButton(sender: UIButton) {

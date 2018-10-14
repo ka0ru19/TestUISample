@@ -17,6 +17,8 @@
 		63F97028216A9EDF00BBEE93 /* UIButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F97027216A9EDF00BBEE93 /* UIButtonViewController.swift */; };
 		63F9702A216B4CBB00BBEE93 /* log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F97029216B4CBB00BBEE93 /* log.swift */; };
 		63F9702E2172655500BBEE93 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F9702D2172655500BBEE93 /* CodeViewController.swift */; };
+		63F97034217318F600BBEE93 /* PropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F97033217318F600BBEE93 /* PropertyNames.swift */; };
+		63F970362173295800BBEE93 /* GenerateCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F970352173295800BBEE93 /* GenerateCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		63F97027216A9EDF00BBEE93 /* UIButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonViewController.swift; sourceTree = "<group>"; };
 		63F97029216B4CBB00BBEE93 /* log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = log.swift; sourceTree = "<group>"; };
 		63F9702D2172655500BBEE93 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
+		63F97033217318F600BBEE93 /* PropertyNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyNames.swift; sourceTree = "<group>"; };
+		63F970352173295800BBEE93 /* GenerateCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 				63F97013216A8F5E00BBEE93 /* ViewController.swift */,
 				63F9702B216B5CBF00BBEE93 /* DemoViewController */,
 				63F97029216B4CBB00BBEE93 /* log.swift */,
+				63F97033217318F600BBEE93 /* PropertyNames.swift */,
+				63F970352173295800BBEE93 /* GenerateCode.swift */,
 				63F97015216A8F5E00BBEE93 /* Main.storyboard */,
 				63F97018216A8F5F00BBEE93 /* Assets.xcassets */,
 				63F9701A216A8F5F00BBEE93 /* LaunchScreen.storyboard */,
@@ -168,11 +174,13 @@
 			files = (
 				63F97028216A9EDF00BBEE93 /* UIButtonViewController.swift in Sources */,
 				63F9702E2172655500BBEE93 /* CodeViewController.swift in Sources */,
+				63F970362173295800BBEE93 /* GenerateCode.swift in Sources */,
 				63F97024216A914D00BBEE93 /* DemoBaseViewController.swift in Sources */,
 				63F97014216A8F5E00BBEE93 /* ViewController.swift in Sources */,
 				63F97012216A8F5E00BBEE93 /* AppDelegate.swift in Sources */,
 				63F9702A216B4CBB00BBEE93 /* log.swift in Sources */,
 				63F97026216A9C0E00BBEE93 /* UILabelViewController.swift in Sources */,
+				63F97034217318F600BBEE93 /* PropertyNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
